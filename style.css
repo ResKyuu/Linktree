@@ -1,0 +1,219 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+main {
+  position: relative;
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+#stars-container {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+#stars,
+#stars2,
+#stars3 {
+  position: absolute;
+  inset: 0;
+  background-repeat: repeat;
+  background-position: 0 0;
+}
+
+#stars {
+  background-image: radial-gradient(
+      circle 1px at 20px 30px,
+      #ffffff,
+      transparent
+    ),
+    radial-gradient(circle 1px at 40px 70px, #ffffff, transparent),
+    radial-gradient(circle 1px at 50px 160px, #dddddd, transparent),
+    radial-gradient(circle 1px at 90px 40px, #ffffff, transparent),
+    radial-gradient(circle 2px at 130px 80px, #ffffff, transparent),
+    radial-gradient(circle 1px at 160px 120px, #dddddd, transparent),
+    radial-gradient(circle 1px at 70px 100px, #c48ef0, transparent),
+    radial-gradient(circle 1px at 140px 190px, #a855f7, transparent);
+  background-size: 200px 200px;
+  animation: moveStars1 15s linear infinite;
+}
+
+#stars2 {
+  background-image: radial-gradient(
+      circle 1px at 40px 40px,
+      #ffffff,
+      transparent
+    ),
+    radial-gradient(circle 1px at 80px 120px, #eeeeee, transparent),
+    radial-gradient(circle 2px at 150px 100px, #ffffff, transparent),
+    radial-gradient(circle 2px at 10px 180px, #dddddd, transparent),
+    radial-gradient(circle 1px at 180px 50px, #c48ef0, transparent),
+    radial-gradient(circle 2px at 100px 10px, #a855f7, transparent);
+  background-size: 300px 300px;
+  animation: moveStars2 20s linear infinite;
+}
+
+#stars3 {
+  background-image: radial-gradient(
+      circle 2px at 10px 50px,
+      #ffffff,
+      transparent
+    ),
+    radial-gradient(circle 3px at 80px 80px, #dddddd, transparent),
+    radial-gradient(circle 2px at 160px 190px, #eeeeee, transparent),
+    radial-gradient(circle 2px at 240px 150px, #a855f7, transparent),
+    radial-gradient(circle 3px at 50px 250px, #c48ef0, transparent);
+  background-size: 400px 400px;
+  animation: moveStars3 50s linear infinite;
+}
+
+@keyframes moveStars1 {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -200px;
+  }
+}
+
+@keyframes moveStars2 {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -300px;
+  }
+}
+
+@keyframes moveStars3 {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -400px;
+  }
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
+}
+
+.mainContainer h1 {
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 0 0 5px #a855f7, 0 0 10px #a855f7;
+}
+
+.mainContainer p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-top: 1rem;
+}
+
+.mainCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(26, 26, 26, 0.945);
+  width: 30em;
+  height: 43em;
+  border-radius: 10px;
+  padding: 20px;
+
+  box-shadow: rgba(156, 87, 255, 0.4) 0px 5px, rgba(142, 70, 240, 0.3) 0px 10px,
+    rgba(128, 54, 225, 0.2) 0px 15px, rgba(114, 38, 210, 0.1) 0px 20px,
+    rgba(100, 22, 195, 0.05) 0px 25px,
+    10px 0px 30px 0px rgba(255, 255, 255, 0.2),
+    -10px 0px 30px 0px rgba(255, 255, 255, 0.2);
+}
+
+.upperCardContent > img {
+  width: 130px;
+  height: 130px;
+  border-radius: 15%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.301),
+    inset 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.upperCardContent > h2 {
+  font-size: 1.5rem;
+  color: #fff;
+  text-shadow: 0 0 5px #a855f7, 0 0 10px #a855f7;
+  margin-top: 1.8rem;
+}
+
+.lowerCard {
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2.5rem;
+  height: 80%;
+  width: 100%;
+}
+
+.redirect {
+  display: flex;
+  padding: 15px;
+  align-items: center;
+  background-color: #00000075;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1.5px,
+    rgba(148, 38, 250, 0.356) 0px 0px 0px 1.5px inset;
+  width: 80%;
+  height: 12%;
+  border-radius: 10px;
+}
+
+.redirect > img {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(1);
+}
+
+.redirect > h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  flex-grow: 1;
+}
+.redirect > img[src*="information.svg"] {
+  transform: scale(1.13); 
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
