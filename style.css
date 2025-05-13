@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,7 +14,7 @@ body {
   padding: 0;
   background-color: #000;
   color: #fff;
-  font-family: sans-serif;
+  font-family: "Roboto Flex", sans-serif;
 }
 
 main {
@@ -125,7 +127,7 @@ main {
 }
 
 .mainContainer h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   color: #fff;
   text-shadow: 0 0 5px #a855f7, 0 0 10px #a855f7;
 }
@@ -141,7 +143,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(26, 26, 26, 0.945);
+  background-color: rgba(5, 5, 5, 0.89);
   width: 30em;
   height: 43em;
   border-radius: 10px;
@@ -150,8 +152,8 @@ main {
   box-shadow: rgba(156, 87, 255, 0.4) 0px 5px, rgba(142, 70, 240, 0.3) 0px 10px,
     rgba(128, 54, 225, 0.2) 0px 15px, rgba(114, 38, 210, 0.1) 0px 20px,
     rgba(100, 22, 195, 0.05) 0px 25px,
-    10px 0px 30px 0px rgba(255, 255, 255, 0.2),
-    -10px 0px 30px 0px rgba(255, 255, 255, 0.2);
+    5px 0px 30px 0px rgba(255, 255, 255, 0.075),
+    -5px 0px 30px 0px rgba(255, 255, 255, 0.075);
 }
 
 .upperCardContent > img {
@@ -163,7 +165,7 @@ main {
 }
 
 .upperCardContent > h2 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   color: #fff;
   text-shadow: 0 0 5px #a855f7, 0 0 10px #a855f7;
   margin-top: 1.8rem;
@@ -189,6 +191,15 @@ main {
   width: 80%;
   height: 12%;
   border-radius: 10px;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+}
+
+.redirect:hover {
+  background-color: rgba(30, 30, 30, 0.85);
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0px 6px 18px rgba(168, 85, 247, 0.4),
+    rgba(168, 85, 247, 0.6) 0px 0px 0px 2px inset;
 }
 
 .redirect > img {
@@ -202,9 +213,10 @@ main {
   font-size: 1.5rem;
   text-align: center;
   flex-grow: 1;
+  letter-spacing: 2px;
 }
 .redirect > img[src*="information.svg"] {
-  transform: scale(1.13); 
+  transform: scale(1.13);
 }
 
 a {
@@ -213,7 +225,17 @@ a {
 }
 a:hover {
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 a:active {
   text-decoration: none;
+}
+
+.about-me-text {
+  color: #ccc;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: left;
+  padding: 0 20px;
+  margin-bottom: 2rem;
 }
